@@ -1,6 +1,6 @@
 return {
     {
-        "echasnovski/mini.surround",
+        "nvim-mini/mini.surround",
         recommended = true,
         keys = {
             { "gz", desc = "Add Surrounding", mode = { "n", "v" } },
