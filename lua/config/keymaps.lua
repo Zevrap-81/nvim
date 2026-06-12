@@ -18,3 +18,15 @@ vim.keymap.set("n", "m", "d", { noremap = true })
 vim.keymap.set("n", "mm", "dd", { noremap = true })
 vim.keymap.set("n", "M", "D", { noremap = true })
 vim.keymap.set("v", "m", "d", { noremap = true })
+
+-- test shortcuts
+vim.keymap.set("n", "<leader>dm", function()
+    require("dap-python").test_method()
+end, { desc = "Debug test method" })
+vim.keymap.set("n", "<leader>dM", function()
+    require("dap-python").test_class()
+end, { desc = "Debug test class" })
+
+-- copy to clipboard shortcuts
+vim.keymap.set({ "n", "v" }, "<C-y>", '"+y', { desc = "Yank to clipboard" })
+vim.keymap.set("n", "<C-y><C-y>", '"+yy', { desc = "Yank line to clipboard" })
